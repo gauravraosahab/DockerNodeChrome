@@ -3,6 +3,9 @@ FROM node:9.7.0
 
 LABEL authors=gauravraosahab
 
+
+RUN apt-get update && apt-get install -y xvfb
+
 #============================================
 # Google Chrome
 #============================================
@@ -12,6 +15,5 @@ RUN apt-get update
 RUN apt-get install -y google-chrome-stable
 RUN rm /etc/apt/sources.list.d/google-chrome.list
 RUN rm -rf /var/lib/apt/lists/* /var/cache/apt/*
-RUN apt-get update && apt-get install -y xvfb
 
 ENV CHROME_BIN /usr/bin/google-chrome

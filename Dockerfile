@@ -1,5 +1,5 @@
 # Getting node image
-FROM node:9.7.0
+FROM node:10.5.2
 
 LABEL authors=gauravraosahab
 
